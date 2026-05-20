@@ -286,7 +286,30 @@ footer {
 footer a { color: var(--accent); text-decoration: none; }
 
 @media (max-width: 640px) {
-  .card { grid-template-columns: 1fr; }
+  nav { padding: 0 1rem; }
+  nav ul { gap: 1.25rem; }
+  nav ul a { font-size: 0.78rem; }
+
+  .hero { padding: 3rem 1.25rem 2.5rem; }
+  .tagline { font-size: 0.95rem; }
+
+  section { padding: 2rem 1.25rem; }
+  hr.divider { margin: 0 1.25rem; }
+
+  .card {
+    grid-template-columns: 1fr;
+    padding: 1.1rem 1.2rem;
+  }
   .card-right { text-align: left; }
+
   .edu-card { flex-direction: column; }
+
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 400px) {
+  nav ul { display: none; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .hero-links { flex-direction: column; align-items: center; }
+  .btn { width: 100%; justify-content: center; }
 }
