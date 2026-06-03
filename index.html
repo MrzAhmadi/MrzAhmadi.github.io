@@ -317,5 +317,19 @@
     <p>Built by Reza &nbsp;·&nbsp; <a href="mailto:MrzAhmadi96@Gmail.com">MrzAhmadi96@Gmail.com</a> &nbsp;·&nbsp; Verona, Italy</p>
   </footer>
 
+  <script>
+    document.addEventListener('click', function(e) {
+      var el = e.target.closest('a, button');
+      if (!el) return;
+      gtag('event', 'click', {
+        element_type: el.tagName.toLowerCase(),
+        element_text: el.innerText.trim(),
+        element_href: el.href || '',
+        element_id: el.id || '',
+        element_class: el.className || ''
+      });
+    });
+  </script>
+
 </body>
 </html>
