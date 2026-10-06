@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automated API Specification Inference from Network Traffic of Android Applications</title>
+  <meta name="description" content="Master's thesis by S. M. Reza Ahmadi (Università degli Studi di Verona, 2026) on inferring OpenAPI specifications for Android applications from their network traffic." />
+  <link rel="canonical" href="https://mrzahmadi.github.io/thesis/" />
+
+  <meta name="citation_title" content="Automated API Specification Inference from Network Traffic of Android Applications">
+  <meta name="citation_author" content="S. M. Reza Ahmadi">
+  <meta name="citation_publication_date" content="2026/07/20">
+  <meta name="citation_dissertation_institution" content="Università degli Studi di Verona">
+  <meta name="citation_pdf_url" content="https://mrzahmadi.github.io/res/thesis_AASI.pdf">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFT57KHT1J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HFT57KHT1J');
+  </script>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="../">Reza Ahmadi</a>
+    <ul>
+      <li><a href="../#publications">Publications</a></li>
+      <li><a href="../#education">Education</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <p class="section-title">Master's Thesis</p>
+      <h1 class="thesis-title">Automated API Specification Inference from Network Traffic of Android Applications</h1>
+      <p class="thesis-author">S. M. Reza Ahmadi</p>
+
+      <dl class="thesis-meta">
+        <div><dt>Institution</dt><dd>Università degli Studi di Verona</dd></div>
+        <div><dt>Degree</dt><dd>Master's Degree in Computer Engineering for Robotics and Smart Industry</dd></div>
+        <div><dt>Date</dt><dd>July 2026</dd></div>
+        <div><dt>Supervisor</dt><dd>Prof. Mariano Ceccato</dd></div>
+        <div><dt>Co-supervisor</dt><dd>Prof. Michele Pasqua</dd></div>
+      </dl>
+
+      <div class="thesis-actions">
+        <a class="btn btn-primary" href="../res/thesis_AASI.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
+          Full text (PDF)
+        </a>
+      </div>
+
+      <h2 class="section-title thesis-abstract-title">Abstract</h2>
+      <p class="thesis-abstract">
+        Application programming interfaces (APIs) connect mobile applications to their back-end services,
+        yet the specifications that document them are often incomplete or outdated. This thesis presents
+        the Automated Pipeline Test System (APTS), which infers OpenAPI Specifications (OAS) for Android
+        applications from their network traffic at scale. Each application runs in an isolated container
+        with an Android emulator, is exercised automatically with the Monkey UI tool, and has its HTTP(S)
+        traffic intercepted by a man-in-the-middle proxy (mitmproxy) and recorded as HAR files. The captured
+        traffic is cleaned by a multi-stage noise-reduction step that removes connectivity checks, static
+        assets, and third-party analytics and telemetry; it is then segmented by base API and converted to
+        OAS. To build a ground truth, a weighted keyword heuristic selected 259 mobile-related specifications
+        from the APIs.guru repository, which were mapped to 9,674 APKs from AndroZoo. A five-minute screening
+        run identified 2,073 interceptable applications, each of which was then tested for one hour across
+        12 parallel containers, taking about eight days in total. Three specification inference tools
+        (har-to-openapi, mitmproxy2swagger, and RestTestGen) and four specification comparators
+        (openapi-diff, oasdiff, api-schema-diff, and RestTestGen) were evaluated against the ground truth.
+        mitmproxy2swagger proved the most robust inference tool, recovering about 500 unique endpoints
+        without failures, while the comparators differed widely in stability and in the 148,833 difference
+        records they produced. The results also reveal API drift: applications call endpoints that their
+        published specifications do not document.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Reza Ahmadi &nbsp;·&nbsp; <a href="mailto:mrzahmadi96@gmail.com">mrzahmadi96@gmail.com</a> &nbsp;·&nbsp; Verona, Italy</p>
+  </footer>
+
+  <script>
+    document.addEventListener('click', function(e) {
+      var el = e.target.closest('a, button');
+      if (!el) return;
+      gtag('event', 'click', {
+        element_type: el.tagName.toLowerCase(),
+        element_text: el.innerText.trim(),
+        element_href: el.href || '',
+        element_id: el.id || '',
+        element_class: el.className || ''
+      });
+    });
+  </script>
+
+</body>
+</html>

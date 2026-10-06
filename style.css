@@ -37,7 +37,7 @@ nav {
   height: 56px;
 }
 
-nav .logo { font-weight: 700; color: var(--accent); font-size: 1.05rem; letter-spacing: 0.03em; }
+nav .logo { font-weight: 700; color: var(--accent); font-size: 1.05rem; letter-spacing: 0.03em; text-decoration: none; }
 nav ul { list-style: none; display: flex; gap: 1.5rem; }
 nav ul a {
   color: var(--muted);
@@ -334,6 +334,44 @@ hr.divider {
 }
 
 .edu-link:hover { opacity: 0.85; transform: translateY(-1px); }
+
+/* Thesis page */
+.thesis-title {
+  font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.thesis-author {
+  margin-top: 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.thesis-meta {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+.thesis-meta div { display: contents; }
+.thesis-meta dt { color: var(--muted); }
+.thesis-meta dd { color: var(--text); }
+
+.thesis-actions { margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.thesis-abstract-title { margin-top: 2.5rem; margin-bottom: 0.75rem; }
+
+.thesis-abstract {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text);
+}
 
 /* Skills */
 .skills-grid {
