@@ -361,7 +361,9 @@ hr.divider {
 
 .thesis-meta div { display: contents; }
 .thesis-meta dt { color: var(--muted); }
-.thesis-meta dd { color: var(--text); }
+.thesis-meta dd { color: var(--text); overflow-wrap: anywhere; }
+.thesis-meta dd a { color: var(--accent); text-decoration: none; }
+.thesis-meta dd a:hover { text-decoration: underline; }
 
 .thesis-actions { margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap; }
 
