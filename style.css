@@ -195,6 +195,14 @@ hr.divider {
   text-decoration: underline;
 }
 
+.card-selection {
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.card-selection a { color: var(--accent); text-decoration: none; }
+.card-selection a:hover { text-decoration: underline; }
+
 .card-desc {
   grid-column: 1 / -1;
   margin-top: 0.75rem;
